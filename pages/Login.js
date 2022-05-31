@@ -13,7 +13,7 @@ export default function Login(props) {
 
 	useEffect(() => {
 		const unSub = onAuthStateChanged(auth, (user) => {
-			user & props.history.push("/");
+			user && props.history.push("/");
 		});
 		return () => unSub();
 	}, [props.history]);
